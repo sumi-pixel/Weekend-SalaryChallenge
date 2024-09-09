@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <link rel="stylesheet" href="style.css">
+  <script src="form.js"></script>
   <title>Salary Calculator</title>
 </head>
 <body>
@@ -11,10 +12,47 @@
   </header>
   <main>
     <h2>Add Employee</h2>
-    <h2>Employees</h2>
+    <form id="employeeForm">
+      <label for="firstName">First Name:</label>
+      <input type = "text" id="firstName" name="firstName" placeholder="First Name" preferred><br><br>
+      <label for="lastName">Last Name:</label>
+      <input type = "text" id="lastName" name="lastName" placeholder="Last Name" preferred><br><br>
+      <label for="idNumber">ID :</label>
+      <input type="text" id="idNumber" name="idNumber" placeholder="ID Number" preferred><br><br>
+      <label for ="jobTitle">Title</label>
+      <input type="text" id="jobTitle" name="jobTitle" placeholder="Job Title" preferred><br><br>
+      <label for="annualSalary">Annual Salary:</label>
+      <input type="number" id="annualSalary" name="annualSalary" placeholder="Annual Salary" preferred><br><br>
+      <button type="submit">Submit</button>
+    </form>
+<table id="employeeTable">
+  <caption> Employee Information</caption>
+<thead>
+  <tr>
+    <th> First Name</th>
+    <th> Last  Name</th>
+    <th> ID </th>
+    <th> Title</th>
+    <th> Annual Salary</th>
+    <th></th>
+    </tr>
+    </thead>
+    <section id="employeeBodyTableSection">
+      <tbody id="employeeBodyTable">
+      <tr>
+        <td>Sumia</td>
+        <td>Abdullahi</td>
+        <td>98456735</td>
+        <td>Developer</td>
+        <td>$65,000</td>
+        <td> <input type= "button" class= "delete-button" value = "Delete"></td>
+      </tr>
+    </tbody>
+    </table>
+  </section>
   </main>
-  <footer>
-    <p>Total Monthly</p>
+  <footer id="footer">
+    Total Monthly Cost: <p id="totalMonthlyCost"></p>
   </footer>
 </body>
 </html>
